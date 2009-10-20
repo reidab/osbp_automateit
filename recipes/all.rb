@@ -59,7 +59,7 @@ unless tagged?(:standby)
   # Customizations
   invoke 'my_packages'
   invoke 'my_apache' # Relies on base_apache
-  # invoke 'my_ruby' # Relies on base_compilers_and_interpreters
+  invoke 'my_ruby' # Relies on base_compilers_and_interpreters
   # invoke 'my_bridgepdx_user'
   # invoke 'my_bridgepdx_common' # Relies on my_apache, my_bridgepdx_user
   # invoke 'my_bridgepdx_wordpress' # Relies on my_bridgepdx_common, my_apache, base_php5, base_mysql, my_bridgepdx_user

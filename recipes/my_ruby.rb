@@ -2,8 +2,6 @@
 
 package_manager.install <<-HERE, :with => :gem, :docs => false
   facets
-  fiveruns-memcache-client
-  memcache-client
   ruby-debug
 HERE
 
