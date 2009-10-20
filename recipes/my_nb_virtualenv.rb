@@ -14,10 +14,8 @@ def virtualenv(env, opts = {}, &block)
   if block_given?
     cd env do
       sh "source bin/activate"
-      ENV['PATH'] = `echo $PATH`
       block.call
       sh "deactivate"
-      ENV['PATH'] = `echo $PATH`
     end
   end
 end
