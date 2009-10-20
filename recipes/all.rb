@@ -1,7 +1,7 @@
 # All recipes for this project
 
 # Platform check
-raise "Sorry, your platform is not supported" unless tagged?("ubuntu_8.04")
+raise "Sorry, your platform is not supported" unless tagged?("ubuntu_9.04")
 
 # Prepare
 invoke 'base_airunners'
