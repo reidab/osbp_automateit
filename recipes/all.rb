@@ -57,7 +57,7 @@ unless tagged?(:standby)
   # invoke 'base_memcached'
 
   # Customizations
-  # invoke 'my_packages'
+  invoke 'my_packages'
   # invoke 'my_apache' # Relies on base_apache
   # invoke 'my_ruby' # Relies on base_compilers_and_interpreters
   # invoke 'my_bridgepdx_user'

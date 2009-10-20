@@ -4,7 +4,6 @@ package_manager.install <<-HERE
   # Console helpers
   vim exuberant-ctags
   screen elinks w3m htop telnet mc ncdu dtach
-  aspell ispell aspell-en
   time pcregrep
   man-db
   tofrodos
