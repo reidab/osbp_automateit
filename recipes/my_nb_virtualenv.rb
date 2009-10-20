@@ -14,7 +14,7 @@ def virtualenv(env, opts = {}, &block)
   if block_given?
     begin
       original_path = ENV['PATH']
-      ENV['PATH'] = "#{File.join(pwd,env)}:#{ENV['PATH']}"
+      ENV['PATH'] = "#{File.join(pwd,env,'bin')}:#{ENV['PATH']}"
       block.call
     ensure
       ENV['PATH'] = original_path
