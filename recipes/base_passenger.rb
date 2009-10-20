@@ -24,7 +24,7 @@ end
 
 # Retrieve information about installed package
 version = `gem list passenger --local`[/ \((.+?)\)/, 1].split(', ').sort.last
-passenger_path = File.dirname(`gem contents passenger --version #{version}`.split.first)
+passenger_path = File.dirname(`gem contents passenger --prefix --version #{version}`.split.first)
 ruby_path = nil
 ruby_paths = ["/opt/ruby-enterprise", "/usr/local", "/usr/bin"]
 ruby_paths.each do |prefix|
