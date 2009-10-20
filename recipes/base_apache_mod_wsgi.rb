@@ -20,6 +20,6 @@ modified |= render :text => <<-HERE, :to => "/etc/apache2/mods-available/mod_wsg
 LoadModule wsgi_module modules/mod_wsgi.so
 HERE
 
-modified |= apache_manager.enable_module "mod_wsgi
-apache_manager.reload if modified"
+modified |= apache_manager.enable_module "mod_wsgi"
+apache_manager.reload if modified
 
