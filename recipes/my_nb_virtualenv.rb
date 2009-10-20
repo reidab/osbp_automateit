@@ -23,7 +23,7 @@ end
 nb_root = "/var/www/northbay"
 
 cd "/var/www/northbay" do
-  virtualenv('nb_env', '--no-site-packages') do
+  virtualenv('nb_env', :site_packages => false) do
     package_manager.install <<-HERE, :with => :egg
       django
     HERE
