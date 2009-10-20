@@ -4,7 +4,6 @@ wsgi_version = '2.6'
 tag = "mod_wsgi-#{wsgi_version}"
 mod_wsgi_so = "/usr/lib/apache2/modules/mod_wsgi.so"
 
-
 unless File.exist?(mod_wsgi_so)
   mktempdircd do
     sh "svn co http://modwsgi.googlecode.com/svn/tags/#{tag} #{tag}"
