@@ -18,7 +18,6 @@ package_manager.install <<-HERE
   php5-mysql
   php5-pgsql
   php5-sqlite
-  php5-sqlite3
 HERE
 
 ["/etc/php5/cli/php.ini", "/etc/php5/apache2/php.ini"].each do |filename|
