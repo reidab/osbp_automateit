@@ -5,5 +5,5 @@ package_manager.install <<-HERE
   build-essential gcc autoconf libtool libreadline5-dev
 
   # Interpreters
-  perl python expect tcl8.4
+  perl python expect
 HERE
