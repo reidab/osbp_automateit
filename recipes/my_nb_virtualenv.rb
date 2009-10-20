@@ -9,7 +9,7 @@ def virtualenv(env, opts = {}, &block)
   args << '--clear' if opts[:clear]
   args << '--relocatable' if opts[:make_relocatable] # acts on existing virtualenv
   
-  sh "virtualenv #{args} #{env}" if opts[:clear] || opts[:make_relocatable] || !File.exist?(env)
+  sh "virtualenv #{args.join(' ')} #{env}" if opts[:clear] || opts[:make_relocatable] || !File.exist?(env)
   
   if block_given?
     cd env do
