@@ -12,10 +12,12 @@ def virtualenv(env, opts = {}, &block)
   sh "virtualenv #{args.join(' ')} #{env}" if opts[:clear] || opts[:make_relocatable] || !File.exist?(env)
   
   if block_given?
-    cd env do
-      sh "source bin/activate"
+    begin
+      original_path = ENV['PATH']
+      ENV['PATH'] = "#{File.join(pwd,env)}:#{ENV['PATH']}"
       block.call
-      sh "deactivate"
+    ensure
+      ENV['PATH'] = original_path
     end
   end
 end
