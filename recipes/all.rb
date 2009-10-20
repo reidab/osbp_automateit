@@ -53,6 +53,7 @@ unless tagged?(:standby)
   invoke 'base_ruby_enterprise'
   invoke 'base_passenger' # Relies on base_apache, base_ruby_enterprise
   invoke 'base_python_virtualenv'
+  invoke 'base_apache_mod_wsgi'
   # invoke 'base_memcached'
 
   # Customizations
