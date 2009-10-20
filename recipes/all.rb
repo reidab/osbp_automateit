@@ -50,17 +50,26 @@ unless tagged?(:standby)
   # invoke 'base_mysql'
   invoke 'base_apache'
   invoke 'base_php5'
+  
+  # Ruby / Passenger
   invoke 'base_ruby_enterprise'
   invoke 'base_passenger' # Relies on base_apache, base_ruby_enterprise
+  
+  # Python / mod_wsgi
   invoke 'base_python_virtualenv'
   invoke 'base_apache_mod_wsgi'
+  
   # invoke 'base_memcached'
 
   # Customizations
   invoke 'my_packages'
   invoke 'my_apache' # Relies on base_apache
   invoke 'my_ruby' # Relies on base_compilers_and_interpreters
-  # invoke 'my_bridgepdx_user'
+  
+  # North Bay Site
+  invoke 'my_nb_user'
+  invoke 'my_nb_virtualenv'
+  
   # invoke 'my_bridgepdx_common' # Relies on my_apache, my_bridgepdx_user
   # invoke 'my_bridgepdx_wordpress' # Relies on my_bridgepdx_common, my_apache, base_php5, base_mysql, my_bridgepdx_user
   # invoke 'my_bridgepdx_wiki' # Relies on my_bridgepdx_wordpress, my_apache, base_php5, base_mysql
